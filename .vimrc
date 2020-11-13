@@ -31,6 +31,8 @@ if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
 
+set history=700
+
 " Don’t create backups when editing files in certain directories
 set backupskip=/tmp/*,/private/tmp/*
 
@@ -104,3 +106,14 @@ if has("autocmd")
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
+
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'yorokobi/vim-splunk'
+Plugin 'dense-analysis/ale'
+Plugin 'puppetlabs/puppet-syntax-vim'
+Plugin 'gcmt/wildfire.vim'
+
+call vundle#end()
+
